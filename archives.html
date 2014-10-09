@@ -8,49 +8,17 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 60px;
-      }
-
-      /* Custom container */
-      .container {
-        margin: 0 auto;
-        max-width: 1000px;
-      }
-      .container > hr {
-        margin: 30px 0;
-      }
-
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        margin: 80px 0;
-        text-align: center;
-      }
-      .jumbotron h1 {
-        font-size: 100px;
-        line-height: 1;
-      }
-      .jumbotron .lead {
-        font-size: 24px;
-        line-height: 1.25;
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
-
-    </style>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/tetcon.css" rel="stylesheet">
+    <link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="bootstrap/js/html5.js"></script>
+      <script src="static/js/html5.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="bootstrap/img/favicon.ico">
+    <link rel="shortcut icon" href="static/img/favicon.ico">
 
   </head>
 
@@ -61,7 +29,7 @@
       <div class="masthead">
         <div class="row-fluid">
           <div class="span2">
-            <img src="bootstrap/img/tetcon.jpg">
+            <img src="static/img/tetcon.jpg">
           </div> <!--logo-->
 
           <div class="span10">
@@ -119,6 +87,28 @@
       </p>
       
       <ul class="nav nav-pills">
+
+        <li class="dropdown">
+          <a class="dropdown-toggle"
+             data-toggle="dropdown" href="#">
+              TetCon 2013
+              <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#tetcon2013_eduardo_vela">Eduardo "sirdarckcat" Vela</a>
+            <li><a href="#tetcon2013_le_nhat_tien">Lê Nhật Tiến</a>
+            <li><a href="#tetcon2013_duong_ngoc_thai">Dương Ngọc Thái</a>
+            <li><a href="#tetcon2013_bruce_dang">Bruce Dang</a>
+            <li><a href="#tetcon2013_pham_tung_duong">Phạm Tùng Dương</a>
+            <li><a href="#tetcon2013_paul_craig">Paul Craig</a>
+            <li><a href="#tetcon2013_nguyen_pho_son">Nguyễn Phố Sơn</a>
+            <li><a href="#tetcon2013_dau_le_trung">Đậu Lê Trung</a>
+            <li><a href="#tetcon2013_nguyen_anh_quynh">Nguyễn Anh Quỳnh</a>
+            <li class="divider"></li>
+            <li><a href="#tetcon2013_panel">Thảo luận bàn tròn</a>
+          </ul>
+        </li>
+
         <li class="dropdown">
           <a class="dropdown-toggle"
              data-toggle="dropdown" href="#">
@@ -138,7 +128,225 @@
         </li>
       </ul>
 
-      <table id="tetcon2012" class="table table-condensed table-hover">
+      <h3 id="tetcon2013">TetCon 2013</h3>
+
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th class="span2">Diễn giả</th>
+            <th class="span6">Nội dung</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr id="tetcon2013_eduardo_vela">
+            <td>Eduardo "sirdarckcat" Vela</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/eduardo.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Eduardo "sirdarckcat" Vela - Tyranny of small decisions&nbsp;<span class="label label-success">English</span></h4>
+                  <p>
+                  This talk is a recap of all the bad decisions people made when designing the web, then how we tried to fix them, how we failed and how we keep developing broken standards, and the lack of security tools forces developers to use the wrong tools.
+                  </p>
+                  <p class="muted">
+                  Eduardo has worked in a couple big IT companies as a security engineer, reported vulnerabilities to most of the others, wrote a book about web security, and presented in some of the most popular security conferences worldwide. Now he works in Google helping product teams develop safer services and developing tools to make the web somewhat safer.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_le_nhat_tien">
+            <td>Lê Nhật Tiến</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/tien.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Lê Nhật Tiến - kaPoW Plugins: Bảo vệ các ứng dụng web với Proof-of-work</h4>
+                  <p>
+                    Comment spam là một vấn đề nhức nhối hiện tại của các blogs và 
+                    forums. Bên cạnh Akismet và reCaptcha, kaPoW cũng tham gia vào cuộc 
+                    chiến chống lại spammers bằng kỹ thuật Proof-of-work. kaPoW tập trung 
+                    vào việc làm chậm spammers bằng cách gửi cho trình duyệt web những 
+                    puzzles bằng javascript để giải trước khi cấp phép cho họ sử dụng dịch vụ
+                    chính của website. Độ khó của puzzle sẽ tuỳ thuộc vào uy tín của người 
+                    dùng. Nhờ áp dụng những kỹ thuật Machine Learning, spammers sẽ nhận 
+                    được puzzles khó hơn nhiều so với người dùng thông thường. Máy tính của
+                    spammers càng tốn nhiều thời gian để giải puzzle,thì quy mô của chiến dịch 
+                    spam càng bị thu nhỏ dẫn đến những suy giảm về lợi ích kinh tế cho 
+                    spammers. Không giống như CAPTCHAs, kaPoW hoàn toàn trong suốt với 
+                    người dùng web vì trình duyệt web sẽ hoàn toàn đảm nhận nhiệm vụ giải 
+                    puzzle thông qua AJAX. kaPoW tương thích với tất cả các ứng dụng web có 
+                    hỗ trợ plugins như WordPress, phpBB, vBB…
+                  </p>
+                  <p class="muted">
+                  Lê Nhật Tiến là thành viên sáng lập và phó giám đốc tại
+                  BeRich.vn, một công ty phát triển hệ sản phẩm tài chính cá nhân cho người 
+                  không chuyên. Anh hiện đang theo học Thạc Sĩ ngành Khoa Học Máy Tính 
+                  tại trường Portland State University, đồng thời tham gia nghiên cứu và phát 
+                  triển dự án chống spam trên nền ứng dụng web.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_duong_ngoc_thai">
+            <td>Dương Ngọc Thái</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/thai.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Dương Ngọc Thái - Bắt đầu chỉ là trò chơi, bây giờ đã là tội ác</h4>
+                  <p>
+                    Những điểm yếu mật mã mà tôi góp phần phát hiện và công bố trong hơn ba năm qua đã ảnh hưởng mạnh mẽ đến sự an toàn của Internet. Để khắc phục những tấn công này, người ta đã phải sửa chữa rất nhiều hệ thống khác nhau, từ trình duyệt, website, thư viện phần mềm cho đến các giao thức và tiêu chuẩn đã tồn tại hàng chục năm. Trong bài nói chuyện này, tôi sẽ điểm lại những kết quả chính và chia sẻ những kinh nghiệm thu được.
+                  </p>
+                  <p class="muted">
+                    Thái hiện đang làm việc tại Google, nơi anh là thành viên của đội an ninh cốt lõi, chịu trách nhiệm về sự an toàn của hầu hết các sản phẩm và dịch vụ của hãng phần mềm này. Trước Google, Thái là chuyên gia tư vấn an ninh ứng dụng tại Matasano Security. Trước khi sang Silicon Valley, Thái là giám đốc an toàn thông tin tại ngân hàng Đông Á. Thái được biết đến nhiều nhất qua các tấn công mật mã vào những thành phần trọng yếu của Internet. Các nghiên cứu tiêu biểu gần đây của anh ấy là tấn công BEAST và CRIME phá vỡ sự an toàn của bộ giao thức SSL/TLS.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_bruce_dang">
+            <td>Bruce Dang</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/bruce.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Bruce Dang - Những tiến bộ về chống khai thác lỗi trong Windows 8</h4>
+                  <p>
+                    Trong thập niên qua, Microsoft đã tạo ra một số biện pháp ngăn ngừa để làm cho việc khai thác lỗi trên Windows khó hơn, ví dụ như DEP, ASLR, SafeSEH, GS security cookie trong Visual C++. Trong Windows 8, Microsoft đã lập thêm một số kỹ thuật bảo vệ mới và tăng thêm hiệu lực của những biện pháp nói trên. Trong bài trình bày này, chúng tôi sẽ nói về chi tiết của những phương pháp mới này trong Windows 8.
+                  </p>
+                  <p class="muted">
+                  Bruce Dang nghiên cứu về an ninh thông tin tại Microsoft. Hiện tại anh lãnh đạo đội "penetration testing" chịu trách nhiệm về sự an toàn của tất cả những sản phẩm phần mềm và phần cứng mới. Trong những năm qua, anh đã trình bày về kỹ thuật phân tích những mã khai thác lỗi trong Microsoft Office, dịch ngược mã nhân hệ điều hành, và virút máy tính Stuxnet. Chuyên môn của anh là về nhân Windows và dịch ngược mã.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_pham_tung_duong">
+            <td>Phạm Tùng Dương</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/anonymous.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Phạm Tùng Dương - Hacking Oracle @2012</h4>
+                  <p>
+                    Năm 2012 là một năm rất nhiều tin tốt và xấu đối với hệ quản trị cơ sở dữ liệu Oracle. Tin vui là số lượng lỗi bảo mật được phát hiện và vá trong các bản vá hàng quí (CPU) là 17, thấp nhất trong 3 năm (2011: 29 lỗi, 2010: 31 lỗi). Tuy nhiên một tin rất không vui là có 3 lỗi mà Oracle không thể sửa được trong các bản vá bảo mật (chỉ có work-around) mà chỉ có thể xử lý dứt điểm trong phiên bản tiếp theo 12c (hiện tại chưa có roadmap phát hành sản phẩm). Đó là 3 lỗi bảo mật:
+                    <ul>
+                      <li>SCN bug (CVE-2012-0082),</li>
+                      <li>TNS Poisoning (CVE-2012-1675),</li>
+                      <li>Stealth Password cracking (CVE-2012-3137).</li>
+                    </ul>
+
+                    Cùng với các yêu cầu ngặt nghèo và khó khăn trong việc nâng cấp và hầu hết các hệ thống (đặc biệt là các hệ thống lớn và quan trọng) thường sử dụng một phiên bản Oracle duy nhất trong một thời gian rất lâu (5-10 năm). Vậy, các DBA cần phải làm gì trong những tình huống như vậy? Trong phần trình bày này, tôi sẽ phân tích lại hai lỗi bảo mật được coi là tiêu biểu trong năm 2012 vừa qua (CVE-2012-1675 và CVE-2012-3137) và đưa ra một số khuyến nghị trong việc nâng cao tính an toàn của hệ thống Oracle.
+                  </p>
+                  <p class="muted">
+                    Phạm Tùng Dương có 3 năm kinh nghiệm trong việc quản trị và triển khai CSDL Oracle cũng như nghiên cứu về database security. Anh hiện tại đang làm kĩ sư nghiên cứu phát triển tại một ISP của Việt Nam và là thành viên của diễn đàn HVA.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_paul_craig">
+            <td>Paul Craig</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/paul.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Paul Craig - Bypassing Local Microsoft Security Policies&nbsp;<span class="label label-success">English</span></h4>
+                  <p>
+                    Local Microsoft security policies are one of the few areas of security that are rarely researched or focused on by the security community. These policies are designed to prevent local users from accessing functionality which has been "Disabled By Your Administrator". From Local Group Policy, Software Restriction Policies, App Locker to Internet Explorer, each Microsoft technology has its own way of restricting what you can and cannot do. For local exploitation attempt these technologies can be troublesome, frustrating and restrict the true potential of your attack. This talk will cover a broad view of the current attacks against Microsoft local policies and the underlying issues affecting this form of security.
+                  </p>
+                  <p class="muted">
+                    Paul is the Principal Security Consultant at Security-Assessment.com. Labeled "A malicious hacker" by the media in his native New Zealand, Paul is now based in sunny Singapore where he leads the SE Asian Penetration Testing Team. Paul has been an avid security researcher and all-round advocate for security from a young age with a passion for exploitation and finding creative methods of of getting shell.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_nguyen_pho_son">
+            <td>Nguyễn Phố Sơn</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/thug.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Nguyễn Phố Sơn</h4>
+                  <p>
+                    Vấn đề mã độc luôn luôn là vấn đề nhức nhối và dành được quan tâm lớn của những người quan tâm tới an ninh an toàn thông tin. Trong bài trình bày này, tôi sẽ trình bày tình hình về các loại mã độc tiêu biểu, các lây lan, phương thức của chúng trên thế giới nói chung và tình Việt Nam nói riêng; tiếp đó là các xu hướng mới về mã độc sắp tới tại Việt Nam, đặc biệt là mã độc nhắm tới các mục tiêu thương mại nằm trên 2 môi trường Microsoft Windows và Google Android.
+                  </p>
+                  <p class="muted">
+                    Hoạt động trong lĩnh vực nghiên cứu mã độc hơn 7 năm, hiện Sơn đang làm giám đốc nghiên cứu của một công ty an ninh mạng và antivirus tại Việt Nam. Sơn dành phần lớn thời gian thiết kế, phát triển scan engine, các module bảo vệ, các module phát hiện mã độc cũng như nghiên cứu các loại mã độc đặc biệt phát triển trên lõi hệ điều hành Windows.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_dau_le_trung">
+            <td>Đậu Lê Trung</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/trung.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Đậu Lê Trung - Webshell detector: Xây dựng hệ thống tự động phát hiện webshell trên webserver</h4>
+                  <p>
+                    Để làm giảm tình trạng các website liên tục bị hacker tấn công, chúng tôi từng bước nghiên cứu để đưa ra giải pháp xây dựng một hệ thống giúp phân tích mã nguồn tự động để tìm ra các webshell trong các webserver. Bên cạnh đó, mong muốn xây dựng hệ thống phát hiện webshell thời gian thực để chạy trên server để hỗ trợ admin có thể phát hiện các script độc trên server và đưa ra cảnh báo kịp thời.
+                  </p>
+                  <p class="muted">
+                    Trung hiện có 3 năm kinh nghiệm làm việc về mảng reverse engineering, windows kernel programming, virus analysis. Hiện đang là sinh viên năm cuối đại học Bách Khoa Hà Nội. Đặc biệt trong mảng bảo mật, Trung đã từng là thành viên trong nhóm Vn-Sec về đọc và nghiên cứu các paper về security từ cách đây 3 năm. Ngoài ra Trung cũng đã từng tham gia hỗ trợ một số tổ chức trong việc điều tra tấn công, phân tích khai thác lỗ hổng trong các định dạng office file, forensic memory, forensic file.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr id="tetcon2013_nguyen_anh_quynh">
+            <td>Nguyễn Anh Quỳnh</td>
+            <td>
+              <div class="media">
+                <img class="media-object pull-left img-rounded" src="static/img/anonymous.jpg">
+                <div class="media-body">
+                  <h4 class="media-heading">Nguyễn Anh Quỳnh - Phát hiện virus đa hình với chữ ký ngữ nghĩa</h4>
+                  <p>
+                    Một trong những cách thức phổ biến nhất hiện dùng để phát hiện virus máy tính là phương phát quét mã theo chuỗi (kỹ thuật pattern matching). Tuy nhiên khi đối đầu với virus đa hình (metamorphic), dạng virus sử dụng nhiều kỹ thuật biến đổi mã khi nhân bản để qua mặt các chữ ký dạng chuỗi, phương pháp này tỏ ra rất kém hiệu quả.
+                  </p>
+                  <p>
+                    Nhằm giải quyết một phần nhỏ của thách thức nêu trên, nghiên cứu này giới thiệu một giải pháp mới nhằm tạo ra chữ ký dạng ngữ nghĩa (semantic signature) cho virus đa hình. Chữ ký ngữ nghĩa giúp phát hiện virus đa hình kể cả khi chúng đã được nhân bản bản bằng các kỹ thuật biến đổi mã thường gặp. Bài trình bày sẽ giới thiệu sơ lược về các cách thức biến đổi mã của virus, sau đó tập trung vào việc xác định ngữ nghĩa và cách nhận dạng của các chuỗi mã đã qua biến đổi. Demo đi kèm sẽ giúp người nghe hiểu rõ về những khó khăn gặp phải, cùng ưu và nhược điểm của giải pháp đã đề ra.
+                  </p>
+                  <p>
+                    Thông qua việc lật lại một vấn đề cổ điển dưới một góc nhìn mới, chúng tôi còn mong muốn giới thiệu tới người nghe một vài kỹ thuật tiên tiến hiện vẫn chưa được biết tới một cách rộng rãi, nhưng hứa hẹn sẽ định hướng cho những nghiên cứu có tính đột phá trong những năm tới trên các lĩnh vực liên quan như reversing, phân tích malware, tự động tìm kiếm và khai thác các lỗi phần mềm.
+                  </p>
+                  <p class="muted">
+                    Nguyễn Anh Quỳnh làm nghiên cứu về an ninh thông tin. Trong những năm qua, anh đã công bố nhiều bài báo và trình bày các kết quả nghiên cứu của mình tại các hội thảo của giới hàn lâm và công nghiệp trên khắp thế giới.
+                  </p>
+                </div>  
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Diễn giả và khách mời</td>
+            <td>
+              <h5>Thảo luận bàn tròn - Vậy bạn muốn trở thành một kỹ sư/nhà nghiên cứu an toàn thông tin?</h5>
+              <p>Phần giao lưu sẽ được tổ chức theo hình thức hỏi đáp giữa khách tham dự và diễn giả cũng như một số khách mời. Chủ đề chính năm nay là: cần phải học gì, làm gì để trở thành kỹ sư an toàn thông tin hoặc có thể bắt đầu nghiên cứu trong lĩnh vực này. Ngoài ra chúng tôi cũng chào đón tất cả các câu hỏi liên quan đến các bài trình bày hoặc các vấn đề khác trong ngành an toàn thông tin.</p>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h3 id="tetcon2012">TetCon 2012</h3>
+
+      <table class="table table-condensed table-hover">
         <thead>
           <tr>
             <th class="span2">Diễn giả</th>
@@ -266,7 +474,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 
   </body>
 </html>
