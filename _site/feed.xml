@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TetCon</title>
+    <description>TetCon provides attendees with hands-on experiences, cutting edge researches, and latest developments in information security in Vietnam and worldwide. Being the only vendor-neutral and the most technical conference in Vietnam, TetCon has become the premier information security event of the country. It has received many positive coverages by the local press and media and the participants of many of the world’s foremost information security experts. Only in its third year, TetCon has been widely recognised as the provider of the highest quality information security content, and the best place to connect with information security professionals in Vietnam.</description>
+    <link>https://tetcon.org/saigon-2015/</link>
+    <atom:link href="https://tetcon.org/saigon-2015/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 25 Nov 2014 13:41:05 -0800</pubDate>
+    <lastBuildDate>Tue, 25 Nov 2014 13:41:05 -0800</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>tetcon.org is now HTTPS only</title>
+        <description>&lt;p&gt;
+I still remember the first certificate that I ordered from Verisign costed a few thousand dollars. The verification process took several weeks and a lot of paperwork. I even had to scan and send Verify my employer's operating license. It was such a bad experience and so expensive that I thought I would never run SSL on my personal sites, until I found &lt;a href=&quot;https://sslmate.com&quot;&gt;SSLMate&lt;/a&gt; a few days ago. Woah! I just need to run a command to buy a certificate that is accepted by all browsers for only 15 bucks/year - as the saying goes it's even cheaper than a bowl of pho! Of course I get what I pay for, some browsers won't even show a green bar, but security-wise tetcon.org and its users get as much protection as www.google.com. Below is the configuration I used for my nginx web server - it's rated &lt;a href=&quot;https://www.ssllabs.com/ssltest/analyze.html?d=tetcon.org&quot;&gt;A+&lt;/a&gt; by the SSL Labs:
+
+&lt;pre&gt;
+  &lt;code&gt;
+  server {
+    listen   80;
+    listen 443 ssl;
+    server_name tetcon.org www.tetcon.org;
+    ssl_certificate     www.tetcon.org.chained.crt;
+    ssl_certificate_key www.tetcon.org.key;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers &quot;EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA RC4 !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS !RC4&quot;;
+    if ($ssl_protocol = &quot;&quot;) {
+       rewrite ^ https://$server_name$request_uri? permanent;
+    }
+    add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains';
+    add_header Public-Key-Pins 'max-age=3600; pin-sha256=&quot;Cm7n+dyRY9t97OOp3nIdI1sBq5U1BZfO+Y5WecBFgB0=&quot;; pin-sha256=&quot;k+4a7obu5IVsq0xaxDrzBSjPO0eNapo4x0xlahj3tlY=&quot;; includeSubDomains';
+    ...
+  }
+  &lt;/code&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;i&gt;Discuss this post on &lt;a href=&quot;http://tinsang.net/news/3269&quot;&gt;Tin Sang&lt;/a&gt;.&lt;/i&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Nov 2014 04:00:00 -0800</pubDate>
+        <link>https://tetcon.org/saigon-2015/2014/11/24/https-only/</link>
+        <guid isPermaLink="true">https://tetcon.org/saigon-2015/2014/11/24/https-only/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>CSS is hard, let's go hacking</title>
+        <description>&lt;p&gt;
+Better late than never! I am excited to announce that TetCon Saigon 2015 will be held at Hotel Majestic Saigon on 6 January 2015. We will start selling tickets in a few days. Please watch this website for more announcements (or visit &lt;a href=&quot;http://tinsang.net&quot;&gt;Tin Sang&lt;/a&gt;, if you are one of the three people including me and my cat that still read it).
+&lt;/p&gt;
+
+&lt;p&gt;
+Re post title: no, I lied. CSS is easy to learn. I've done that 7 times, since 2007.
+&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 11 Nov 2014 04:00:00 -0800</pubDate>
+        <link>https://tetcon.org/saigon-2015/2014/11/11/announcing-tetcon-saigon-2015/</link>
+        <guid isPermaLink="true">https://tetcon.org/saigon-2015/2014/11/11/announcing-tetcon-saigon-2015/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

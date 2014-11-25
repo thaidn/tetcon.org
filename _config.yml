@@ -1,0 +1,26 @@
+# Site settings
+title: TetCon
+email: thai@tetcon.org
+description: "TetCon provides attendees with hands-on experiences, cutting edge
+              researches, and latest developments in information security in
+              Vietnam and worldwide. Being the only vendor-neutral and the most
+              technical conference in Vietnam, TetCon has become the premier
+              information security event of the country. It has received many
+              positive coverages by the local press and media and the
+              participants of many of the world’s foremost information security
+              experts. Only in its third year, TetCon has been widely recognised
+              as the provider of the highest quality information security content,
+              and the best place to connect with information security professionals
+              in Vietnam."
+
+baseurl: "/saigon-2015"
+url: "https://tetcon.org"
+facebook_username: TetCon
+twitter_username: TetCon
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["node_modules"]
