@@ -12,7 +12,9 @@ layout: default
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
+                    {% if page.author %}
                     <span class="meta">Posted by {{ page.author }} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -32,12 +34,12 @@ layout: default
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ site.baseurl }}/{{page.previous.url}}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a> 
+                        <a href="{{ site.baseurl }}/{{page.previous.url}}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous</a> 
                     </li>
                     {% endif %} 
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ site.baseurl }}/{{page.next.url}}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                        <a href="{{ site.baseurl }}/{{page.next.url}}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next &rarr;</a>
                     </li>
                     {% endif %} 
                 </ul>

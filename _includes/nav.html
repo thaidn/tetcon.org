@@ -15,14 +15,32 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                {% if site.active_conference.ticket_url %}
                 <li>
-                    <a target="_blank" href="https://docs.google.com/forms/d/1bXFG9kmaMcT5mAGRImB1S9D6seoR7IsB5_4ki4Loo78/viewform?usp=send_form">Become a speaker</a>
+                    <a target="_blank" href="{{ site.active_conference.ticket_url }}">Buy tickets</a>
                 </li>
+                {% endif %}
+                {% if site.active_conference.cfp_url %}
+                <li>
+                    <a target="_blank" href="{{ site.active_conference.cfp_url }}">Submit a paper</a>
+                </li>
+                {% endif %}
+
+                {% for doc in site.documents %}
+                    {% assign conference_name = site.active_conference.name | slugify %}
+                    {% if doc.collection == conference_name and doc.url contains "/index.html" %}
+                <li>
+                    <a href="{{ doc.url | prepend: site.baseurl }}"> {{ doc.title }}</a>
+                </li>
+                    {% endif %}
+                {% endfor %}
+
                 {% for page in site.pages %}
                 <li>
-                    {% if page.menu-title %}<a href="{{ page.url | prepend: site.baseurl }}">{{ page.menu-title }}</a>{% endif %}
+                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 </li>
                 {% endfor %}
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->

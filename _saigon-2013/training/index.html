@@ -1,0 +1,31 @@
+---
+layout: page
+title: "Training"
+description: "Train with the best to become the best"
+header-img: "img/index-bg.jpg"
+---
+
+{% assign page_category = page.url | remove: "/index.html" %}
+{% assign conference = page.url | split: "/" | first %}
+
+{{ conference }}
+
+{% for doc in site.documents %}
+
+{% if doc.url contains page_category and doc.url != page.url %}
+<div class="post-preview">
+    <a href="{{ doc.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ doc.title }}
+        </h2>
+    </a>
+    <p class="post-meta">
+        Taught by
+        {% for trainer in doc.trainers %}
+            <a href="/{{ trainer | slugify | append: '.html' | prepend: '/speakers/' | prepend: doc.collection }}">{{ trainer }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+        {% endfor %}
+    </p>
+</div>
+<hr>
+{% endif %}
+{% endfor %}
