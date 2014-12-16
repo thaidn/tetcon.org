@@ -1,0 +1,29 @@
+---
+layout: page
+title: "Talks"
+description: "Hands-on experiences and cutting-edge researches"
+header-img: "img/index-bg.jpg"
+---
+
+{% assign page_category = page.url | remove: "/index.html" %}
+{% assign documents = site.documents | sort: 'title' %}
+{% for doc in documents %}
+
+{% if doc.url contains page_category and doc.url != page.url and doc.speakers %}
+
+<div class="post-preview">
+	<a href="{{ doc.url | prepend: site.baseurl }}">
+        <h2 class="post-title" id="{{ doc.title | slugify }}">
+            {{ doc.title }}
+        </h2>
+    </a>
+    <p class="post-meta">
+    	Presented by
+    	{% for speaker in doc.speakers %}
+    		<a href="/{{ speaker | slugify | append: '.html' | prepend: '/speakers/' | prepend: doc.collection }}">{{ speaker }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+    	{% endfor %}
+    </p>
+</div>
+<hr>
+{% endif %}
+{% endfor %}

@@ -9,12 +9,12 @@ layout: default
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <h1>{{ page.title }}</h1>
-                    {% if page.subtitle %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% endif %}
-                    {% if page.author %}
-                    <span class="meta">Posted by {{ page.author }} on {{ page.date | date: "%B %-d, %Y" }}</span>
-                    {% endif %}
+                    <p class="meta">
+			    	Presented by
+			    	{% for speaker in page.speakers %}
+			    		<a href="/{{ speaker | slugify | append: '.html' | prepend: '/speakers/' | prepend: page.collection }}">{{ speaker }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+			    	{% endfor %}
+			    	</p>
                 </div>
             </div>
         </div>
@@ -27,7 +27,9 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				{{ content }}
+				{% for line in page.description %}
+				<p>{{ line }}</p>
+				{% endfor %}
 
                 <hr>
 

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
 
-    <title>{{ site.title }} {% if page.title %} {{ page.title }} {% endif %}</title>
+    {% assign page_url = page.url | remove: "/index.html" %}
+    {% assign paths = page_url | split: "/" %}
+    <title>{{ site.title }}{% if page.collection %}{% assign name = page.collection | split: '-' %} {{name[0] | capitalize }} {{ name[1] }}{% endif %}{% if page.title %}{% if paths.size == 4 %} | {{ paths[2] | capitalize }}: {{ page.title }}{% else %} | {{ page.title }}{% endif %}{% endif %}</title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -19,7 +21,7 @@
     <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
 
     <!-- Custom Fonts -->
-    <link href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -38,7 +40,7 @@
     <link rel="icon" type="image/png" href="{{ "/favicons/favicon-16x16.png" | prepend: site.baseurl }}" sizes="16x16">
     <link rel="icon" type="image/png" href="{{ "/favicons/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -6,9 +6,6 @@ header-img: "img/index-bg.jpg"
 ---
 
 {% assign page_category = page.url | remove: "/index.html" %}
-{% assign conference = page.url | split: "/" | first %}
-
-{{ conference }}
 
 {% for doc in site.documents %}
 

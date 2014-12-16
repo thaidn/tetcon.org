@@ -1,6 +1,45 @@
 ---
 layout: page
 title: "Schedule"
-description: "One full day of non stop hacking // 8am - 5pm, 6 January 2015"
+description: "One full day of non stop hacking // 8am - 6pm, 6 January 2015"
 header-img: "img/index-bg.jpg"
 ---
+
+<table class="table table-condensed table-hover">
+    <thead>
+      <tr>
+        <th class="span2">Time</th>
+        <th class="span6">Presentation</th>
+      </tr>
+    </thead>
+    <tbody>
+
+{% assign page_category = page.url | remove: "/index.html" %}
+{% assign documents = site.documents | sort: 'start_time' %}
+
+{% for doc in documents %}
+    {% if doc.url contains page_category and doc.url != page.url %}
+        <tr>
+            <td>{{ doc.start_time }}</td>
+            <td>
+                {% if doc.speakers %}
+                <a href="/{{ doc.title | slugify | append: '.html' | prepend: '/talks/' | prepend: doc.collection }}">
+                    <h4>{{ doc.title }}</h4>
+                </a>
+                <small class="text-muted">
+                    Presented by
+                    {% for speaker in doc.speakers %}
+                        <a href="/{{ speaker | slugify | append: '.html' | prepend: '/speakers/' | prepend: doc.collection }}">{{ speaker }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+                    {% endfor %}
+                </small>
+                <p>{{ doc.description }}</p>
+                {% else %}
+                <h4>{{ doc.title }}</h4>
+                {% endif %}
+            </td>
+        </tr>
+    {% endif %}
+{% endfor %}
+    </tbody>
+    </thead>
+</table>

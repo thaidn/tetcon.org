@@ -28,7 +28,7 @@
 
                 {% for doc in site.documents %}
                     {% assign conference_name = site.active_conference.name | slugify %}
-                    {% if doc.collection == conference_name and doc.url contains "/index.html" %}
+                    {% if doc.collection == conference_name and doc.url contains "/index.html" and doc.title %}
                 <li>
                     <a href="{{ doc.url | prepend: site.baseurl }}"> {{ doc.title }}</a>
                 </li>

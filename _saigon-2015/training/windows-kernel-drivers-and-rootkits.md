@@ -1,6 +1,6 @@
 ---
-layout: post
-title: Windows kernel drivers and rootkits
+layout: training
+title: Windows Kernel Drivers And Rootkits
 date: January 3-5, 2015
 trainers:
   - Bruce Dang
@@ -19,8 +19,3 @@ description: "This 3-day course will rapidly cover Windows kernel internals,
               rootkits."
 header-img: "img/index-bg.jpg"
 ---
-
-<p>{{ page.description }}</p>
-<p><b>Intended Audience</b>: {{ page.intended-audience }}.</p>
-<p><b>Prerequisite</b>: {{ page.prerequisite }}.</p>
-<p><b>Software requirements</b>: {{ page.software-requirements }}.</p>

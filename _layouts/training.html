@@ -1,0 +1,10 @@
+---
+layout: post
+---
+
+<p>{{ page.description }}</p>
+<p><strong>Intended Audience</strong>: {{ page.intended-audience }}.</p>
+<p><strong>Prerequisite</strong>: {{ page.prerequisite }}.</p>
+{% if page.software-requirements %}
+<p><strong>Software requirements</strong>: {{ page.software-requirements }}.</p>
+{% endif %}
