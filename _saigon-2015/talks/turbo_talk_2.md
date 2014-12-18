@@ -1,7 +1,7 @@
 ---
 layout: talk
 header-img: "img/index-bg.jpg"
-title: Third Turbo Talk
+title: Turbo Talk 2
 language: Vietnamese
-start_time: "11:30"
+start_time: "15:00"
 ---

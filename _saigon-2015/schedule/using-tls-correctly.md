@@ -7,5 +7,5 @@ start_time: "10:30"
 speakers:
   - Duong Pham
 description:
-  - "Trong bài nói này, tôi sẽ trình bày lại cách thức để có thể sử dụng TLS một cách đúng đắn và an toàn. Bên cạnh đó, tôi cũng trình bày và giải thích thêm một số thuật ngữ và tính năng nâng cao của giao thức này nhằm nâng cao tính an tòan trong việc triển khai và sử dụng giao thức TLS trên thực tế như PFS, OCSP stapling. Ngoài ra, dựa trên công cụ đánh giá được trình bày trong bài nói (Qualys SSLLabs) tôi sẽ demo một thí nghiệm nhỏ đánh giá nhanh việc sử dụng TLS trong một số các dịch vụ Internet Banking và cổng thanh toán tại Việt Nam."
+  - "SSL/TLS is the most important security protocol on the Internet. It has been deployed in Vietnam and worldwide to protect financial transactions, personal data, and other sensitive information. Unfortunately, I found that many systems, especially in Vietnam, are using the protocol incorrectly. In this talk, I will present the common SSL/TLS issues found at major banks and payment gateways in Vietnam, even though most of them are spending thousands of dollars per year on certificates. I will show how to fix the issues, and get an A+ rating from Qualys SSL Lab, and be as secure as www.google.com or www.facebook.com with a budget as little as $15/year."
 ---
