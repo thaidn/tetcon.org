@@ -5,16 +5,15 @@
  */
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'PT Sans', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
+  line-height: 1.8;
+
 }
-p {
-  line-height: 1.5;
-  margin: 30px 0;
-}
+
 p a {
-  text-decoration: underline;
+  border-bottom: solid 1px;
 }
 h1,
 h2,
@@ -23,14 +22,15 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
 }
 a {
   color: #404040;
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #42a740;
+  text-decoration: none;
 }
 a img:hover,
 a img:focus {
@@ -47,7 +47,6 @@ hr.small {
   border-color: white;
 }
 .navbar-custom {
-  background: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -61,7 +60,7 @@ hr.small {
 .navbar-custom .nav li a {
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 @media only screen and (min-width: 768px) {
@@ -115,14 +114,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
+    color: #42a740;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: #42a740;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -135,25 +134,39 @@ hr.small {
 }
 .intro-header {
   background-color: #808080;
-  background: no-repeat center center;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px;
+  min-height: 600px;
 }
+.index-img {
+  background: 
+  /* top, transparent red */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.55)
+    ),
+  /* bottom, image */
+  url('https://unsplash.imgix.net/45/tkLOe7nnQ7mnMsiuijBy_hm.jpg?q=75&fm=jpg&s=77320b2f59f340a0a4d57c34128f2f6e') no-repeat center center;
+}
+
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 100px 0 50px;
+  padding: 250px 0 0px;
   color: white;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 150px 0;
+    padding: 350px 0 0 0;
+    text-align: center;
+
   }
 }
 .intro-header .site-heading,
@@ -167,21 +180,21 @@ hr.small {
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  font-size: 24px;
-  line-height: 1.1,
-			display: block;
+  font-size: 18px;
+  line-height: 1.1;
+	display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin: 10px 0 0;
+  margin: 10px 0 20px;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
-    font-size: 80px;
+/*    font-size: 80px;*/
   }
 }
 .intro-header .post-heading h1 {
-  font-size: 35px;
+/*  font-size: 35px;*/
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
@@ -195,8 +208,7 @@ hr.small {
   font-weight: 600;
 }
 .intro-header .post-heading .meta {
-  font-family: 'Lora', 'Times New Roman', serif;
-  font-style: italic;
+  font-family: 'Open Sans', 'Times New Roman', serif;
   font-weight: 300;
   font-size: 20px;
 }
@@ -205,11 +217,68 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 55px;
+    display: block;
+    width: 100%;
+    line-height: 1.2;
+    margin: 20px auto;
+    font-size: 48px;
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
   }
+}
+.section {
+  margin-bottom: 80px;
+}
+.about {
+  text-align: center;
+}
+.fa-intro-icons {
+  display: block;
+  margin: 0.4em auto;
+  color: #46a546;
+  text-align: center; 
+}
+.updates .time {
+  border-top: solid 1px #46a546;
+  margin-top: 1em;
+  padding-left: 0px; 
+}
+  .updates .time span {
+    display: block;
+    padding-top: 1em;
+    font-size: 18px; 
+  }
+.updates .link-item h4 a {
+  margin-left: 0.5em; 
+}
+.updates .link-item h4 a, .updates .link-item i {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; 
+}
+.updates .link-item i.fa {
+  color: #46a546; 
+}
+.updates .email {
+  margin-top: 2em; 
+}
+.sponsors .microsoft, .sponsors .google {
+  display: block;
+  width: 50%;
+  height: 140px;
+  text-indent: -9999px; 
+}
+.sponsors .microsoft {
+  background: url("http://mscorpnews.blob.core.windows.net/ncmedia/2014/10/MSFT_logo_rgb_C-Gray.png") no-repeat;
+  background-size: 380px;
+  background-position: center; 
+}
+.sponsors .google {
+  background: url("http://lh3.ggpht.com/-zaZEWeRB7ys/UmZAilTyNwI/AAAAAAAANXQ/gYvKTnzjbEg/d/logo_420_color_2x.png") no-repeat;
+  background-size: 224px;
+  background-position: center;
+  background-position-y: -5px; 
 }
 .post-preview > a {
   color: #404040;
@@ -217,7 +286,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: #42a740;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -241,7 +310,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: #42a740;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -250,9 +319,13 @@ hr.small {
   }
 }
 .section-heading {
-  font-size: 36px;
-  margin-top: 60px;
-  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+}
+.section-subheading {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
 }
 .caption {
   text-align: center;
@@ -266,6 +339,7 @@ hr.small {
 }
 footer {
   padding: 50px 0 65px;
+  background: #1e1f27;
 }
 footer .list-inline {
   margin: 0;
@@ -321,7 +395,7 @@ footer .copyright {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #0085a1;
+  color: #42a740;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -329,21 +403,23 @@ form .row:first-child .floating-label-form-group {
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  border-radius: 0;
-  padding: 15px 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+  border: solid 2px #fff;
 }
 .btn-default:hover,
-.btn-default:focus {
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+.btn-default:focus,
+.btn-call {
+  background-color: #42a740;
+  border: 1px solid #42a740;
   color: white;
+}
+.btn-call:hover {
+  background: #399438;
 }
 .pager {
   margin: 20px 0 0;
@@ -351,26 +427,23 @@ form .row:first-child .floating-label-form-group {
 .pager li > a,
 .pager li > span {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  padding: 10px 5px;
+  padding: 7px 15px;
   background-color: white;
-  border-radius: 0;
+  border-radius: 2px;
 }
 @media only screen and (min-width: 768px) {
   .pager li > a,
   .pager li > span {
     font-size: 14px;
-    padding: 15px 25px;
+    padding: 7px 21px;
   }
 }
 .pager li > a:hover,
 .pager li > a:focus {
   color: white;
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+  background-color: #42a740;
+  border: 1px solid #42a740;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -391,12 +464,12 @@ form .row:first-child .floating-label-form-group {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #42a740;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #42a740;
 }
 img::selection {
   color: white;
@@ -407,5 +480,5 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #0085a1;
+  webkit-tap-highlight-color: #42a740;
 }

@@ -3,27 +3,102 @@ layout: default
 ---
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{{ page.header-img }}')">
+<header class="intro-header index-img">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
                 <div class="site-heading">
                     <h1>{{ site.title }} {{ site.active_conference.name }}</h1>
-                    <hr class="small">
-                    <span class="subheading">{{ site.active_conference.date }} // {{ site.active_conference.location }}</span>
+                    <span class="subheading">{{ site.active_conference.date }}, {{ site.active_conference.location }}</span>
+                    <button type="button" class="btn btn-call btn-default">Become a Speaker</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="heading-overlay"></div>
 </header>
 
 <!-- Main Content -->
 <div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			{{ content }}
-		</div>
-	</div>
+  <div class="section about">
+  	<div class="row">
+      <div class="section-heading">
+         <h2>What is TetCon?</h2>
+          <span class="section-subheading">TetCon provides attendees with hands-on experiences, cutting edge researches, and latest developments in information security in Vietnam and worldwide.</span>         
+      </div>
+    </div>
+    <div class="row">
+        <div class="text col-lg-4">
+            <i class="fa fa-shield fa-5x fa-intro-icons"></i>
+            <p>It is the only vendor-neutral, the most technical conference and the <strong>premier information security</strong> event in Viet Nam.</p>
+        </div>     
+        <div class="text col-lg-4 ">
+            <i class="fa fa-comments-o fa-5x fa-intro-icons"></i>
+            <p>Only in its third year, TetCon has been widely <strong>widely recognised</strong> as the provider of the highest quality content</p>
+        </div> 
+        <div class="text col-lg-4">
+            <i class="fa fa-users fa-5x fa-intro-icons"></i>
+            <p>And the <strong>best place to connect</strong> with information security experts in Vietnam and outside the country.</p>
+        </div> 
+    </div>
+  </div>
+  <div class="section updates">
+    <div class="row">
+      <div class="col-lg-5 quick-links">
+        <h2>Get Involved</h2> 
+        <p class="bold">TetCon welcome all the people who is in charged with information security</p>
+        <div class="link-item">
+            <h4><i class="fa fa-bicycle fa-2x fa-fw"></i><a href="">Go to a TetCon</a></h4>
+            <p>Ut vitae fermentum nulla. Fusce tellus, venenatis id condimentum, fringilla eget enim.</p>
+        </div>
+        <div class="link-item">
+            <h4><i class="fa fa-angellist fa-2x fa-fw"></i><a href="">Become a Speaker</a></h4>
+            <p>Ut vitae fermentum nulla. Fusce tellus justo, id condimentum ut, fringilla eget enim. </p>
+        </div>
+        <div class="email">
+            <p><strong>Get latest news from TetCon</strong><br>Enter your email here.</p>
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <div class="input-group">
+                  <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-call btn-default">Submit</button>
+            </form>
+        </div>
+      </div>
+      <div class="col-lg-7 events">
+        <h2>Latest News<!-- <a href="{{ post.url }}"><button type="button" class="pull-right btn btn-xs btn-call btn-default">Read More</button></a>  --></h2>
+          {% for post in paginator.posts %}
+          <div class="event-item">
+            <div class="col-sm-2 time">
+              <span datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</span>
+            </div>
+            <div class="col-sm-10">
+              <h4><a href="{{ post.url }}">{{ post.title }}</a> </h4>
+              <p>{{ post.content | split:'<!--more-->' | first }}</p>
+
+            </div>
+          </div>
+          {% endfor %}
+      </div>      
+    </div>
+  </div>
+  <div class="section sponsors">
+    <div class="row">
+      <div class="section-heading">
+         <h2>Our Sponsors</h2>
+          <span class="section-subheading">TetCon provides attendees with hands-on experiences, cutting edge researches, and latest developments in information security in Vietnam and worldwide.</span>       
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="microsoft col-lg-6"></div>
+        <div class="google col-lg-6"></div>        
+      </div>
+  
+    </div>  
+  </div>        
 </div>
 
-<hr>

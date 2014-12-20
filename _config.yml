@@ -16,7 +16,7 @@ url: "https://tetcon.org"
 markdown: kramdown
 highlighter: pygments
 permalink: pretty
-paginate: 5
+paginate: 3
 exclude: ["node_modules"]
 
 # Active conference setting

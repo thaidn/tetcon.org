@@ -6,7 +6,9 @@ author:     "Thai"
 header-img: "img/index-bg.jpg"
 ---
 <p>
-I still remember the first certificate that I ordered from Verisign costed a few thousand dollars. The verification process took several weeks and a lot of paperwork. I even had to scan and send Verisign my employer's operating license. It was such a bad experience and so expensive that I thought I would never run SSL on my personal sites, until I found <a href="https://sslmate.com">SSLMate</a> a few days ago. Woah! I just need to run a command to buy a certificate that is accepted by all browsers for only 15 bucks/year - as the saying goes it's even cheaper than a bowl of pho! Of course I get what I pay for, some browsers won't even show a green bar, but security-wise tetcon.org and its users get as much protection as www.google.com. Below is the configuration I used for my nginx web server - it's rated <a href="https://www.ssllabs.com/ssltest/analyze.html?d=tetcon.org">A+</a> by the SSL Labs:
+I still remember the first certificate that I ordered from Verisign costed a few thousand dollars. The verification process took several weeks and a lot of paperwork. 
+<!--more-->
+I even had to scan and send Verisign my employer's operating license. It was such a bad experience and so expensive that I thought I would never run SSL on my personal sites, until I found <a href="https://sslmate.com">SSLMate</a> a few days ago. Woah! I just need to run a command to buy a certificate that is accepted by all browsers for only 15 bucks/year - as the saying goes it's even cheaper than a bowl of pho! Of course I get what I pay for, some browsers won't even show a green bar, but security-wise tetcon.org and its users get as much protection as www.google.com. Below is the configuration I used for my nginx web server - it's rated <a href="https://www.ssllabs.com/ssltest/analyze.html?d=tetcon.org">A+</a> by the SSL Labs:
 
 <pre>
   <code>
