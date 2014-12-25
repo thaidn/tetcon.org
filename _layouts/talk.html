@@ -8,11 +8,11 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>{{ page.title }}</h1>
+                    <h1>{{ page.title }}{% if page.title_en %} // {{ page.title_en }}{% endif %}</h1>
                     <p class="meta">
 			    	Presented by
 			    	{% for speaker in page.speakers %}
-			    		<a href="/{{ speaker | slugify | append: '.html' | prepend: '/speakers/' | prepend: page.collection }}">{{ speaker }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+			    		<a href="/{{ speaker.link_name | slugify | append: '.html' | prepend: '/speakers/' | prepend: page.collection }}">{{ speaker.display_name }}</a>{% if forloop.last %}.{% else %}, {% endif %}
 			    	{% endfor %}
 			    	</p>
                 </div>
@@ -30,6 +30,13 @@ layout: default
 				{% for line in page.description %}
 				<p>{{ line }}</p>
 				{% endfor %}
+
+                {% if page.description_en %}
+                <hr>
+                {% for line in page.description_en %}
+                <p>{{ line }}</p>
+                {% endfor %}
+                {% endif %}
 
                 <hr>
 

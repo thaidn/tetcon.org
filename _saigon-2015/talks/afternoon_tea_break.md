@@ -1,7 +1,7 @@
 ---
 layout: talk
 header-img: "img/index-bg.jpg"
-title: Turbo Talk 2
+title: Tea Break
 language: Vietnamese
-start_time: "15:00"
+start_time: "14:30"
 ---

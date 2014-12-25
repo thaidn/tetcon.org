@@ -9,19 +9,19 @@ header-img: "img/index-bg.jpg"
 {% assign documents = site.documents | sort: 'title' %}
 {% for doc in documents %}
 
-{% if doc.url contains page_category and doc.url != page.url and doc.speakers %}
+{% if doc.layout == "talk" and doc.speakers %}
 
 <div class="post-preview">
-	<a href="{{ doc.url | prepend: site.baseurl }}">
+    <a href="{{ doc.url | prepend: site.baseurl }}">
         <h2 class="post-title" id="{{ doc.title | slugify }}">
-            {{ doc.title }}
+            {{ doc.title }}{% if doc.title_en %} // {{ doc.title_en }}{% endif %}
         </h2>
     </a>
     <p class="post-meta">
-    	Presented by
-    	{% for speaker in doc.speakers %}
-    		<a href="/{{ speaker | slugify | append: '.html' | prepend: '/speakers/' | prepend: doc.collection }}">{{ speaker }}</a>{% if forloop.last %}.{% else %}, {% endif %}
-    	{% endfor %}
+        Presented by
+        {% for speaker in doc.speakers %}
+            <a href="/{{ speaker.link_name | slugify | append: '.html' | prepend: '/speakers/' | prepend: doc.collection }}">{{ speaker.display_name }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+        {% endfor %}
     </p>
 </div>
 <hr>

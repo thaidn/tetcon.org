@@ -1,7 +1,7 @@
 ---
 layout: talk
 header-img: "img/index-bg.jpg"
-title: Tea Break
+title: Lunch Break
 language: Vietnamese
-start_time: "15:30"
+start_time: "11:30"
 ---
