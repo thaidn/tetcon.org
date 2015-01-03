@@ -23,5 +23,5 @@ description_en:
 
   - "One of the most biggest issues that we face during the development of X86 engine for Capstone framework (www.capstone-engine.org) is to discover undocumented X86 instructions. Towards the solution for this this problem, we will present some methodologies & tools that can help to automatically find undocumented code & verify their semantics. Some tools - with full source code - will also be public after this talk."
 language: Vietnamese
-start_time: "15:45"
+start_time: "16:50"
 ---

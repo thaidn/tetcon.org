@@ -2,7 +2,8 @@
 layout: talk
 header-img: "img/index-bg.jpg"
 title: Rosetta Flash
-start_time: "13:00"
+start_time: "10:45"
+language: English
 speakers:
   - link_name: Michele Spagnuolo
     display_name: Michele Spagnuolo

@@ -1,7 +1,7 @@
 ---
 layout: talk
 header-img: "img/index-bg.jpg"
-title: Using TLS Correctly
+title: Using TLS correctly
 speakers:
   - link_name: Pham Tung Duong
     display_name: Phạm Tùng Dương

@@ -16,5 +16,5 @@ A few more speakers have confirmed their talks:
 </p>
 
 <p>
-The tentative <a href="http://localhost:4000/saigon-2015/schedule/index.html">schedule</a> is out. The last two talks will be announced soon - one of them is very interesting and is presented by a female researcher.
+The tentative <a href="https://tetcon.org/saigon-2015/schedule/index.html">schedule</a> is out. The last two talks will be announced soon - one of them may be presented by a female researcher.
 </p>
