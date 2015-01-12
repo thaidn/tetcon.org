@@ -35,7 +35,7 @@ header-img: "img/index-bg.jpg"
                 {% if doc.presentation_urls or doc.video_urls %}
                 <section>
                     {% for url in doc.presentation_urls %}
-                    <a href="{{url}}">
+                    <a href="{{ url }}">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>

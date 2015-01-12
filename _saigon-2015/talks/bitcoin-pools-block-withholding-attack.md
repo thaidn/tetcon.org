@@ -10,5 +10,7 @@ description:
 
   - To the best of my knowledge, this is the first work that thoroughly studies the attack both analytically and empirically. 
 language: Vietnamese
+presentation_urls:
+  - https://docs.google.com/a/tetcon.org/file/d/0B__XkpZ7x-l0YVRLTWtTNTJpbnM/edit
 start_time: "13:00"
 ---

@@ -4,3 +4,22 @@ title: "Archives"
 description: "All the talks since 2012, free of charge"
 header-img: "img/index-bg.jpg"
 ---
+
+{% for conference in site.conferences %}
+<div class="post-preview">
+    <h2 class="post-title">
+            {{ conference.name }}
+    </h2>
+    <p class="text-muted">
+    	{% for doc in site.documents %}
+            {% assign conference_name = conference.name | slugify %}
+            {% if doc.collection == conference_name and doc.url contains "/index.html" and doc.title %}
+                <li>
+                    <a href="{{ doc.url | prepend: site.baseurl }}"> {{ doc.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </p>
+</div>
+<hr>
+{% endfor %}

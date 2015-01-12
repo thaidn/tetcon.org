@@ -8,9 +8,9 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>{{ site.title }} {{ site.active_conference.name }}</h1>
+                    <h1>{{ site.title }} {{ site.conferences[0].name }}</h1>
                     <hr class="small">
-                    <span class="subheading">{{ site.active_conference.date }} // {{ site.active_conference.location }}</span>
+                    <span class="subheading">{{ site.conferences[0].date }} // {{ site.conferences[0].location }}</span>
                 </div>
             </div>
         </div>

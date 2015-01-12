@@ -19,27 +19,23 @@ permalink: pretty
 paginate: 5
 exclude: ["node_modules"]
 
-# Active conference setting
-active_conference:
-  name: Saigon 2015
-  date: 6 January 2015
-  location: Hotel Majestic Saigon
-  ticket_url: http://ticketbox.vn/event/tetcon-saigon-2015-14509
-  cfp_url: https://docs.google.com/forms/d/1bXFG9kmaMcT5mAGRImB1S9D6seoR7IsB5_4ki4Loo78/viewform?usp=send_form
+conferences:
+  - name: Saigon 2015
+    date: 6 January 2015
+    location: Hotel Majestic Saigon
+    ticket_url: http://ticketbox.vn/event/tetcon-saigon-2015-14509
+    cfp_url: https://docs.google.com/forms/d/1bXFG9kmaMcT5mAGRImB1S9D6seoR7IsB5_4ki4Loo78/viewform?usp=send_form
+  - name: Saigon 2013
+    date: 15 January 2013
+    location: HCMC University of Technology
+  - name: Saigon 2012
+    date: 13 January 2012
+    location: Trung Tâm Thông tin Hợp tác Quốc Tế Thông Tấn
 
 collections:
   saigon-2015:
-    name: Saigon 2015
-    date: 6 January 2015
-    location: Hotel Majestic Saigon
     output: true
   saigon-2013:
-    name: Saigon 2013
-    date: 15 January 2013
-    location: HCMC University of Technology
     output: true
   saigon-2012:
-    name: Saigon 2012
-    date: 13 January 2012
-    location: Trung Tâm Thông tin Hợp tác Quốc Tế Thông Tấn
     output: true

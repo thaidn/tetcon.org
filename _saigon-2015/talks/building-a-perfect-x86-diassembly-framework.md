@@ -22,6 +22,8 @@ description_en:
   - "However, building a “perfect” disassembly framework for Intel's X86 architecture is extremely challenging due to the special characteristics of X86 ISA. This talk is about some interesting tricky X86 code that are incorrectly handled by all public frameworks and reversing tools. Several “0-day“ X86 code that has never been documented in public will be released at the same time."
 
   - "One of the most biggest issues that we face during the development of X86 engine for Capstone framework (www.capstone-engine.org) is to discover undocumented X86 instructions. Towards the solution for this this problem, we will present some methodologies & tools that can help to automatically find undocumented code & verify their semantics. Some tools - with full source code - will also be public after this talk."
+presentation_urls:
+  - https://docs.google.com/a/tetcon.org/file/d/0B__XkpZ7x-l0TGxZeVlOV3FUOUE/edit
 language: Vietnamese
 start_time: "16:50"
 ---

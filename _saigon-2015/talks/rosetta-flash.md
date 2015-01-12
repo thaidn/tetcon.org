@@ -24,4 +24,6 @@ description:
   or still have vulnerable JSONP endpoints at the time of writing.
   Popular web development framework Ruby on Rails and MediaWiki also
   addressed this vulnerability."
+presentation_urls:
+  - https://docs.google.com/a/tetcon.org/file/d/0B__XkpZ7x-l0Q2M4X05NZ1c5SDQ/edit
 ---

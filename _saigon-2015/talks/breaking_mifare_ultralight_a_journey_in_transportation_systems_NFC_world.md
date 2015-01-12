@@ -14,5 +14,7 @@ description: NFC is growing around us. In several EU, US and Asia countries Mifa
              just using his/her NFC-enabled smartphone; moreover, I'll show
              that it is also possible to forge (and sell) tickets very cheaply.
 language: English
+presentation_urls:
+  - https://docs.google.com/a/tetcon.org/file/d/0B__XkpZ7x-l0RWhoQk1tM2ZiM28/edit
 start_time: "14:10"
 ---

@@ -15,19 +15,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                {% if site.active_conference.ticket_url %}
+                {% if site.conferences[0].ticket_url %}
                 <li>
-                    <a target="_blank" href="{{ site.active_conference.ticket_url }}">Buy tickets</a>
+                    <a target="_blank" href="{{ site.conferences[0].ticket_url }}">Buy tickets</a>
                 </li>
                 {% endif %}
-                {% if site.active_conference.cfp_url %}
+                {% if site.conferences[0].cfp_url %}
                 <li>
-                    <a target="_blank" href="{{ site.active_conference.cfp_url }}">Submit a paper</a>
+                    <a target="_blank" href="{{ site.conferences[0].cfp_url }}">Submit a paper</a>
                 </li>
                 {% endif %}
 
                 {% for doc in site.documents %}
-                    {% assign conference_name = site.active_conference.name | slugify %}
+                    {% assign conference_name = site.conferences[0].name | slugify %}
                     {% if doc.collection == conference_name and doc.url contains "/index.html" and doc.title %}
                 <li>
                     <a href="{{ doc.url | prepend: site.baseurl }}"> {{ doc.title }}</a>
