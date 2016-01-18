@@ -1,0 +1,27 @@
+---
+layout:     post
+title:      "Submit a talk now!"
+date:       2015-10-04 12:00:00
+author:     "Thai"
+header-img: "img/index-bg.jpg"
+---
+
+<p>
+Click <a href="https://docs.google.com/forms/d/1gKVxNfXmYYtkUDLwfB3wNfpvxc3l-ASvtMzEZzCmWEw/viewform">here</a> to submit your talks. Last year we got far more talks submitted than we have room for, so please submit early to secure your spot. For most talks, especially those with new findings, you can expect a yes/no response from us in just a few days.
+</p>
+
+<p>
+TetCon will reimburse up to $400 for domestic travel and $1,000 for international travel. TetCon will pay for a single hotel room for up to two nights at the official conference hotel, limited to the nights of January 3 and 4, 2016. TetCon will not offer any flight, travel or accommodations reimbursement for lightning talk speakers. All speakers will receive a free pass to the conference and all parties.
+</p>
+
+<p>
+The submission window will be open from 6 October 2015 and closed on 06 December 2015, at 11:51pm Saigon time zone. The last batch of speakers will be announced one week after that.
+</p>
+
+<p>
+We especially love to hear from student or female researchers. Please feel free to contact the program committee (cfp@tetcon.org) or me (thaidn@gmail.com) if you want to submit something, but need help review or improve your work. Although we recommend using English, for your convenience you can always write us in Vietnamese.
+</p>   
+
+<p>
+By the way, Bruce and Son confirmed that they will teach <a href="https://tetcon.org/saigon-2016/training/windows-kernel-drivers-and-rootkits.html">reverse engineering of Windows Kernel Rootkits</a>. More details on how to sign up, fees and scholarships will be announced as soon as the venue and other details are finalized. I'm traveling so it might take a bit longer, but all info should be available by the end of this month.
+</p>

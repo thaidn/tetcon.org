@@ -1,0 +1,76 @@
+---
+layout: page
+title: "Talks"
+description: "Hands-on experiences and cutting-edge researches"
+header-img: "img/index-bg.jpg"
+---
+
+{% assign documents = site.documents | sort: 'title' %}
+{% for doc in documents %}
+
+{% if doc.url contains page.collection and doc.layout == "talk" and doc.speakers %}
+
+<div class="post-preview">
+    <a href="{{ doc.url | prepend: site.baseurl }}">
+        <h2 class="post-title" id="{{ doc.title | slugify }}">
+            {{ doc.title }}{% if doc.title_en %} // {{ doc.title_en }}{% endif %}
+        </h2>
+    </a>
+    <p class="post-meta">
+        Presented by
+        {% for speaker in doc.speakers %}
+            <a href="/{{ speaker.link_name | slugify | append: '.html' | prepend: '/speakers/' | prepend: doc.collection }}">{{ speaker.display_name }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+        {% endfor %}
+    </p>
+    {% if doc.presentation_urls or doc.video_urls or docs.external_urls or docs.github_urls %}
+    <p>
+        {% for url in doc.presentation_urls %}
+        <a href="{{ url }}">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+        {% endfor %}
+
+        {% for url in doc.video_urls %}
+        <a href="{{ url }}">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+        {% endfor %}
+
+        {% for url in doc.github_urls %}
+        <a href="{{ url }}">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+        {% endfor %}
+
+        {% for url in doc.video_urls %}
+        <a href="{{ url }}">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+        {% endfor %}
+
+        {% for url in doc.external_urls %}
+        <a href="{{ url }}">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-external-link fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+        {% endfor %}
+    </p>
+    {% endif %}
+</div>
+<hr>
+{% endif %}
+{% endfor %}

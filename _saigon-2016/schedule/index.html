@@ -1,0 +1,64 @@
+---
+layout: page
+title: "Schedule"
+description: "One full day of non stop hacking // 8am - 6:30pm, 4 January 2016"
+header-img: "img/index-bg.jpg"
+---
+
+<table class="table table-condensed table-hover">
+    <thead>
+      <tr>
+        <th class="span2">Time</th>
+        <th class="span6">Activity</th>
+      </tr>
+    </thead>
+    <tbody>
+
+{% assign documents = site.documents | sort: 'start_time' %}
+
+{% for doc in documents %}
+    {% if doc.url contains page.collection and doc.layout == 'talk' and doc.url != page.url %}
+        <tr>
+            <td>{{ doc.start_time }}</td>
+            <td>
+                {% if doc.speakers %}
+                <a href="{{ doc.url }}">
+                    <h4>{{ doc.title }}{% if doc.title_en %} // {{ doc.title_en }}{% endif %}
+                    </h4>
+                </a>
+                <small class="text-muted">
+                    Presented by
+                    {% for speaker in doc.speakers %}
+                        <a href="/{{ speaker.link_name | slugify | append: '.html' | prepend: '/speakers/' | prepend: doc.collection }}">{{ speaker.display_name }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+                    {% endfor %}
+                </small>
+                {% if doc.presentation_urls or doc.video_urls %}
+                <section>
+                    {% for url in doc.presentation_urls %}
+                    <a href="{{url}}">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                    {% endfor %}
+                    {% for url in doc.video_urls %}
+                    <a href="{{ url }}">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                    {% endfor %}
+                </section>
+                {% endif %}
+                {% else %}
+                <h4>{{ doc.title }}</h4>
+                {% endif %}
+            </td>
+        </tr>
+    {% endif %}
+{% endfor %}
+    </tbody>
+    </thead>
+</table>

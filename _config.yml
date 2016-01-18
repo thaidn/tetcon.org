@@ -2,12 +2,9 @@
 title: TetCon
 email: thai@tetcon.org
 description: TetCon is the most technical and the only vendor-neutral information security
-             conference that has been taking place annually in Saigon since 2012. TetCon
-             provides attendees with hands-on experiences, cutting-edge researches, and
-             latest developments in information security in Vietnam and around the world.
-             In its third year of existence, TetCon has been widely trusted as the provider
-             of the highest quality content on information security, and the best place in
-             Vietnam to connect with information security professionals.
+             conference that has been taking place annually in Saigon, Vietnam since 2012.
+             TetCon aims to provide attendees with hands-on experiences, cutting-edge researches, and
+             latest developments in information security in Vietnam and around the world. TetCon is a not-for-profit event; all proceeeds after cost is covered shall be donated to charity and civil society organizations in Vietnam.
 
 baseurl: ""
 url: "https://tetcon.org"
@@ -18,8 +15,15 @@ highlighter: pygments
 permalink: pretty
 paginate: 5
 exclude: ["node_modules"]
+gems: [jekyll-paginate]
+excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
 
 conferences:
+  - name: Saigon 2016
+    date: 4 January 2016
+    location: Sheraton Saigon Hotel & Towers
+    cfp_url: https://docs.google.com/forms/d/1gKVxNfXmYYtkUDLwfB3wNfpvxc3l-ASvtMzEZzCmWEw/viewform?usp=send_form
+    ticket_url: https://ticketbox.vn/event/55112/ticket-booking/26953#/step-select-tickets
   - name: Saigon 2015
     date: 6 January 2015
     location: Hotel Majestic Saigon
@@ -33,6 +37,8 @@ conferences:
     location: Trung Tâm Thông tin Hợp tác Quốc Tế Thông Tấn
 
 collections:
+  saigon-2016:
+    output: true
   saigon-2015:
     output: true
   saigon-2013:

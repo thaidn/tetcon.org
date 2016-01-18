@@ -1,0 +1,21 @@
+---
+layout: page
+menu-title: "Speakers"
+title: "Speakers"
+description: "Top experts that usually do not have a CISSP"
+header-img: "img/index-bg.jpg"
+---
+
+{% for doc in site.documents %}
+
+{% if doc.url contains page.collection and doc.layout == "speaker" and doc.url != page.url %}
+<div class="post-preview">
+	<a href="{{ doc.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ doc.title }}
+        </h2>
+    </a>
+</div>
+<hr>
+{% endif %}
+{% endfor %}
